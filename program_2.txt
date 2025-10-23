@@ -1,0 +1,201 @@
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git branch b1
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git branch b2
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git branch
+  b1
+  b2
+* main
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git checkout
+Your branch is up to date with 'origin/main'.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git checkout b1
+Switched to branch 'b1'
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git status
+On branch b1
+nothing to commit, working tree clean
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ echo "in branch b1 hello world" >> lab3.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ echo "in branch b1 branching world" >> lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git add lab3.c
+warning: in the working copy of 'lab3.c', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git commit -m " lab3 for b1"
+[b1 34531eb]  lab3 for b1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lab3.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git add  lab4.c
+warning: in the working copy of 'lab4.c', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git commit -m " lab3 for b1"
+[b1 b030031]  lab3 for b1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git commit -m " lab3 for b1"
+On branch b1
+nothing to commit, working tree clean
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ ^c
+git ommit -m " lab3 for b1"
+git: 'ommit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git ommit -m " lab3 for b1"
+git: 'ommit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git add lab3.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git add  lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git ommit -m " lab3 for b1"
+git: 'ommit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b1)
+$ git checkout b2
+Switched to branch 'b2'
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ git branch
+  b1
+* b2
+  main
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ echo "in branch b2 hello world " >> lab5.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ echo "in branch b2 branching world" >> lab6.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ git add lab5.c
+warning: in the working copy of 'lab5.c', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ git add lab6.c
+warning: in the working copy of 'lab6.c', LF will be replaced by CRLF the next time Git touches it
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ git commit -m " lab5 and lab 6 in branch
+> "
+[b2 6ff4089]  lab5 and lab 6 in branch
+ 2 files changed, 2 insertions(+)
+ create mode 100644 lab5.c
+ create mode 100644 lab6.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (b2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git diff mai..b1
+fatal: ambiguous argument 'mai..b1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git diff main..b1
+diff --git a/lab3.c b/lab3.c
+new file mode 100644
+index 0000000..cb4d332
+--- /dev/null
++++ b/lab3.c
+@@ -0,0 +1 @@
++in branch b1 hello world
+diff --git a/lab4.c b/lab4.c
+new file mode 100644
+index 0000000..8b71845
+--- /dev/null
++++ b/lab4.c
+@@ -0,0 +1 @@
++in branch b1 branching world
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git merge b1
+Updating b22b377..b030031
+Fast-forward
+ lab3.c | 1 +
+ lab4.c | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 lab3.c
+ create mode 100644 lab4.c
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git push main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git push main origin
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git branch -merged
+error: did you mean `--merged` (with two dashes)?
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git push main origin
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 562 bytes | 562.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/kkedaranatha2006-dot/3VC24CS053.git
+   b22b377..b030031  main -> main
+
+Admin@DESKTOP-HGNLPEA MINGW64 /d/ProjectB/3VC24Cs053 (main)
+$
